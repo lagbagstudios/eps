@@ -10,18 +10,17 @@ config_version=4
 
 [application]
 
-config/name="EPS"
+config/name="Environmental Protection Game"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
-
-[display]
-
-window/stretch/mode="2d"
-window/stretch/aspect="keep"
 
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[mono]
+
+project/assembly_name="Environmental Protection Game"
 
 [physics]
 
