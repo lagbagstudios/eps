@@ -18,7 +18,7 @@ And finally clone/fork this repository: [lagbagstudios/eps (github.com)](https:/
 
 There is already a great doc here: [C# basics — Godot Engine (stable) documentation in English](https://docs.godotengine.org/en/stable/tutorials/scripting/c_sharp/c_sharp_basics.html) but I've tried to summarize the exact steps I took below.
 
-1. Download everything in [Initial Setup](#Initial%20Setup)
+1. Download everything in [Initial Setup](#initial-setup)
 2. In Godot's **Editor → Editor Settings** menu:
     - Set **Mono** -> **Editor** -> **External Editor** to **Visual Studio Code**.
     - Set **Mono** -> **Builds** -> **Build Tool** to **dotnet CLI**.
