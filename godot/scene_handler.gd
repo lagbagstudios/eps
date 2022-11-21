@@ -6,6 +6,7 @@ var time_max: int = 100
 var current_scene: Node
 var progress: float = 0
 var path: String
+var loading: bool = false
 
 func _ready() -> void:
 	var root: Viewport = get_tree().root
@@ -45,8 +46,7 @@ func goto_scene(p: String) -> void:
 	set_process(true)
 	current_scene.queue_free()
 	
-	# Show the loading screen
-	#get_node("res://animation_player").play("loading")
+	loading = true
 	
 	wait_frames = 1
 
