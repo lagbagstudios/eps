@@ -13,7 +13,7 @@ func _ready() -> void:
 	var root: Viewport = get_tree().root
 	current_scene = root.get_child(root.get_child_count() - 1)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if loader == null:
 		set_process(false)
 		return
