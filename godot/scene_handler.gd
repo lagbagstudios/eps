@@ -8,6 +8,7 @@ var progress: float = 0
 var path: String
 var loading: bool = false
 
+# Load current scene on initialization
 func _ready() -> void:
 	var root: Viewport = get_tree().root
 	current_scene = root.get_child(root.get_child_count() - 1)
@@ -17,6 +18,7 @@ func _process(delta: float) -> void:
 		set_process(false)
 		return
 	
+	# Can be used to delay scene change
 	if wait_frames > 0:
 		wait_frames -= 1
 		return
@@ -38,16 +40,17 @@ func _process(delta: float) -> void:
 
 func goto_scene(p: String) -> void:
 	path = p
+	# Load our new scene with high granularity
 	loader = ResourceLoader.load_interactive(path)
 	if loader == null:
 		show_error()
 		return
-	
+	# Enable the _process(delta) function
 	set_process(true)
+	# Remove the current scene
 	current_scene.queue_free()
-	
 	loading = true
-	
+	# Wait 1 frame before starting the load (can be changed if animation is added)
 	wait_frames = 1
 
 func set_new_scene(resource: Resource) -> void:
