@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="Environmental Protection Game"
-run/main_scene="res://SceneHandler.tscn"
+run/main_scene="res://MainMenu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+SceneHandler="*res://scene_handler.gd"
 
 [gui]
 
