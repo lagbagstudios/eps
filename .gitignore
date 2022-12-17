@@ -10,3 +10,12 @@ data_*/
 
 # VSCode ignores
 .vscode/
+
+# Ignore raw_assets folder
+raw_assets/
+
+# Ignore any exports
+android/
+ios/
+windows/
+macos/
