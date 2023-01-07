@@ -1,8 +1,5 @@
 extends Control
 
-signal start_game
-signal options
-
 onready var main_bg = $Background
 onready var main_buttons = $Buttons
 
@@ -22,17 +19,12 @@ func _ready() -> void:
 	quit_button.connect("button_down", self, "quit")
 	yes_quit_button.connect("button_down", self, "yes_quit")
 	no_quit_button.connect("button_down", self, "no_quit")
-	
-	main_bg.modulate = Color(1.0, 1.0, 1.0, 1.0)
-	main_buttons.modulate = Color(1.0, 1.0, 1.0, 1.0)
-	quit_modal.visible = false
 
 func start_game():
-	emit_signal("start_game")
 	print_debug("start_game")
+	SceneHandler.goto_scene(Globals.CUTSCENE1_TSCN)
 
 func options():
-	emit_signal("options")
 	print_debug("options")
 
 func quit():

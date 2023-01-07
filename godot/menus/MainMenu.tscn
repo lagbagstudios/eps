@@ -197,16 +197,16 @@ custom_constants/separation = 64
 
 [node name="StartButton" type="TextureButton" parent="Buttons/VB"]
 margin_right = 622.0
-margin_bottom = 112.0
+margin_bottom = 181.0
 size_flags_horizontal = 3
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 4 )
 
 [node name="QuitButton" type="TextureButton" parent="Buttons/VB"]
-margin_top = 176.0
+margin_top = 245.0
 margin_right = 622.0
-margin_bottom = 260.0
+margin_bottom = 394.0
 size_flags_horizontal = 3
 toggle_mode = true
 texture_normal = ExtResource( 5 )
@@ -225,6 +225,7 @@ texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 7 )
 
 [node name="QuitDialogue" type="MarginContainer" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
